@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Finding_the_prime_number
+{
+    class PrimeNumbers
+    {
+        // Print out the prime Numbers
+
+        static void Main(string[] args)
+        {
+            //For statement counting to 100
+            for (int num = 1; num < 100; num++)
+            {
+                //for statement decrementing 
+                for (int num2 = num - 1; num2 > 0; num2--)
+                {
+                    //if statement declaring that if the value for num2 is equal to 1
+                    if (num2 == 1)
+                    {
+                        // Printing out the prime numbers
+                        Console.WriteLine("\nPrime number:\n{0}", num);
+                      
+                    }
+                    // using modulo to divide num and num2 and declaring it not to be equal to 0
+                    // if it's not equal to zero, it continues by going back to the for statement 
+                    // and incrementing which will then make the first if statement true.
+                    if (num % num2 != 0)
+                    {
+                        continue;  
+                    }
+                        // if the first 2 if statements aren't hit, the program goes to the 
+                        // else statement and break from the program.
+                    else 
+                    {
+                        break;
+                    }//end of else
+                }//end of 2nd for
+            }//end of 1st for
+        }//end of main method
+    }//end of class PrimeNumber
+}//end of namespace
